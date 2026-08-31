@@ -1,0 +1,35 @@
+body{
+    background-color: #2c3e50;
+}
+#title{
+    color: white;
+    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+}
+nav a{
+    color: silver;
+    text-decoration: none;
+}
+h2{
+    color: brown;
+}
+.para{
+    color: white;
+}
+
+.button{
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    color: black;
+}
+#courses{
+    color: white;
+}
+#in{
+    color: white;
+}

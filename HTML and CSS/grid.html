@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boxes{
+            display: grid;
+            grid-template-columns:repeat(3,1fr);
+            gap: 20px;
+        }
+        .frac{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            border: 2px solid black;
+        }
+        .frac div{
+            border: 3px dotted black;
+        }
+        .sidebar{
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            border: 4px dashed green;
+            gap: 20px;
+
+        }
+        .sidebar div{
+            border: 2px solid black;
+        }
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            width: 600px;
+            gap: 20px;
+            border: 1px solid red;
+        }
+        .cards div{
+            border: 1px dotted red;
+        }
+        .card1{
+            grid-column: span 3;
+        }
+        .card4{
+            grid-row: span 4;
+        }
+        .card1{
+            grid-column: 1/4;
+        }
+        .page{
+            display: grid;
+            grid-template-columns:200px 1fr ;
+            grid-template-areas: 
+            "header header"
+            "sidebar main"
+            "footer footer";
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+        }
+        .page article{
+            border: 2px dotted red;
+        }
+        .header{
+            grid-area:header ;
+
+        }
+        .sidebar1{
+            grid-area: sidebar;
+        }
+        .main  {
+            grid-area: main;
+        }
+        .footer{
+            grid-area: footer;
+        }
+        .productcards{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+        .productcards div{
+            border: 2px solid black;
+            text-align: center;
+        }
+        @media(max-width:600px){
+            .productcards{
+                grid-template-columns: repeat(2,1fr);
+                /* max-width: 1fr; */
+            }
+
+        }
+        @media(max-width:300px){
+            .productcards{
+                grid-template-columns: 1fr;
+            }
+        }
+        .featureproduct{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .minmaxcards{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+            gap: 20px;
+        }
+        .minmaxcards div{
+            border: 2px dotted red;
+        }
+        .dashboard{
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            grid-template-areas: "header header"
+            "sidebar main"
+            "footer footer";
+            width: 100%;
+            height: 500px;
+            border: 2px solid black;
+        }
+        .dashboard div{
+            border: 3px solid yellow;
+        }
+        .header1{
+            grid-area: header;
+        }
+        .sidebar2{
+            grid-area: sidebar;
+        }
+        .main1{
+            display: grid;
+            grid-template-columns:repeat(3,1fr);
+            grid-area: main;
+
+        }
+        .main1 div{
+            border: 2px dotted red;
+            padding: 20px;
+        }
+        .footer1{
+            grid-area: footer;
+        }
+        .kpi{
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+        }
+        .images{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            border: 3px solid blue;
+            grid-auto-rows: 150px;
+        }
+        .images input{
+            border: 2px dotted black;
+        }
+        .image6{
+            grid-column: span 3;
+            grid-row:span 3;
+        }
+        .container{
+            width: 800px;
+            height: 500px;
+            border: 2px solid black;
+            gap: 20px;
+            display: grid;
+            place-items: center;
+            align-content: flex-start;
+            justify-content: flex-end;
+        }
+        .grid{
+            width: 500px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+
+        }
+        .page1{
+            background-color: bisque;
+        }
+        .navi{
+            background-color: antiquewhite;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+        .navbar nav{
+            display: flex;
+            gap: 20px;
+        }
+        .navbar a{
+            text-decoration: none;
+        }
+        .navbar input{
+            text-align: center;
+            width: 50%;
+        }
+        .hero{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            border: 2px solid white;
+            place-items: center;
+        }
+        .hero button{
+            width: 120px;
+            background-color: red;
+            border-radius: 5px;
+            animation: pulse 2s infinite ease ;
+            padding: 20px;
+        }
+        @keyframes pulse{
+            0%{
+                transform: scale(1);
+            }
+            100%{
+                transform:scale(1.1);
+            }
+        }
+        .strip{
+            display: flex;
+            justify-content: space-around;
+            gap:20px;
+            font-size: larger;
+            margin: 20px;
+        }
+        .side{
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-areas: "sidebar3 displaycards";
+            text-align: center;
+            gap: 20px;
+
+        }
+        .sidebar3{
+            grid-area: sidebar3;
+            border: 1px solid white;
+        }
+        .displaycards{
+            grid-area: displaycards;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+            gap: 20px;
+        }
+        .displaycards article{
+            border: 1px solid white;
+            background-color: burlywood;
+            border-radius: 5px;
+        }
+        .footer3{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .footer3 a{
+            text-decoration: none;
+            color: black;
+        }
+        @media (max-width:500px){
+            .footer3{
+                flex-direction: column;
+            }
+            .strip{
+                flex-direction: column;
+            }
+            .hero{
+                grid-template-columns: 1fr;
+            }
+            .navbar{
+                flex-direction: column;
+            }
+            .navbar nav{
+                flex-wrap: wrap;
+            }
+            .side{
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "sidebar3"
+                "displaycards";
+
+            }
+            .sidebar3{
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <div class="frac">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div><br><br>
+    <div class="sidebar">
+        <div class="side">Holaa</div>
+        <div> fraction</div>
+    </div><br><br>
+    <div class="cards">
+        <div class="card1">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div class="card4">4</div>
+        <div>5</div>
+        <div>5</div>
+    </div>
+<section class="page">
+    <article class="header">header</article>
+    <article class="sidebar1">sidebar</article>
+    <article class="main">main</article>
+    <article class="footer">footer</article>
+</section><br><br>
+<div class="productcards">
+    <div>
+        <input type="image" >
+        <h3>title</h3>
+        <p>price</p>
+        <button>card</button>
+    </div>
+    <div> <input type="image" >
+        <h3>title</h3>
+        <p>price</p>
+        <button>card</button></div>
+    <div> <input type="image" >
+        <h3>title</h3>
+        <p>price</p>
+        <button>card</button></div>
+    <div> <input type="image" >
+        <h3>title</h3>
+        <p>price</p>
+        <button>card</button></div>
+    <div class="featureproduct"> <input type="image" >
+        <h3>title</h3>
+        <p>price</p>
+        <button>card</button></div>
+    <div > <input type="image" >
+        <h3>title</h3>
+        <p>price</p>
+        <button>card</button></div>
+    <div> <input type="image" >
+        <h3>title</h3>
+        <p>price</p>
+        <button>card</button></div>
+    <div> <input type="image" >
+        <h3>title</h3>
+        <p>price</p>
+        <button>card</button></div>
+    <div> <input type="image" >
+        <h3>title</h3>
+        <p>price</p>
+        <button>card</button></div>
+    <div> <input type="image" >
+        <h3>title</h3>
+        <p>price</p>
+        <button>card</button></div>
+    <div> <input type="image" >
+        <h3>title</h3>
+        <p>price</p>
+        <button>card</button></div>
+    <div> <input type="image" >
+        <h3>title</h3>
+        <p>price</p>
+        <button>card</button></div>
+</div><br><br>
+<div class="minmaxcards">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+</div><br><br>
+<div class="dashboard">
+    <div class="header1">header</div>
+    <div class="sidebar2">sidebar</div>
+    <div class="main1">
+        <div class="kpi">
+            <div>
+            <h3>card1</h3>
+            <p>phone</p>
+            <p>25000</p>
+            </div>
+            <div>
+            <h3>card3</h3>
+            <p>phone</p>
+            <p>25000</p>
+            </div>
+            <div>
+            <h3>card3</h3>
+            <p>phone</p>
+            <p>25000</p>
+            </div>
+        </div>
+        <div>kpi card2</div>
+        <div>kpi card3</div>
+    </div>
+    <div class="footer1">footer</div>
+</div><br><br>
+<div class="images">
+    <input type="image" >
+    <input type="image" >
+    <input type="image" >
+    <input type="image" >
+    <input type="image" class="image6">
+    <input type="image" >
+    <input type="image" >
+    <input type="image" >
+    <input type="image" >
+    <input type="image" >
+    <input type="image" >
+    <input type="image" >
+</div>
+<div class="container">
+    <div class="grid">
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    </div>
+</div><br><br>
+
+<h1>E COMMERCE PAGE</h1>
+
+<section class="page1">
+<section class="navi">
+    <article class="navbar">
+        <h2>LOGO</h2>
+        <nav>
+            <a href="#">home</a>
+            <a href="#">items</a>
+            <a href="#">product cards</a>
+            <a href="#">contact</a>
+        </nav>
+        <input type="search" placeholder="--------search--------">
+        <p>👤User</p>
+    </article>
+</section>
+<section class="hero">
+    <article class="hero1">
+        <h3>SEASON END SALE</h3>
+        <p>Shop our latest products</p>
+        <button>Shop now</button>
+    </article>
+    <article><img src="" alt="product image"></article>
+</section>
+<section class="strip">
+    <article>electronics</article>
+    <article>shoes</article>
+    <article>shirts</article>
+    <article>pants</article>
+    <article>books</article>
+</section>
+<section class="side">
+    <article class="sidebar3">
+    <h3>FILTERS</h3>
+    <p>category</p>
+    <p>brand</p>
+    <p>price</p>
+    </article>
+    <article class="displaycards">
+        <article>
+        <p>puma</p>
+        <p>good lokking</p>
+        <p>2500</p>
+    </article>
+    <article><p>puma</p>
+        <p>good lokking</p>
+        <p>2500</p></article>
+    <article><p>nothing mobile</p>
+        <p>best mobiles</p>
+        <p>35000</p></article>
+    <article><p>puma</p>
+        <p>good lokking</p>
+        <p>2500</p></article>
+    <article><p>nike</p>
+        <p>good lokking</p>
+        <p>5500</p></article>
+    <article><p>reebok</p>
+        <p>good lokking</p>
+        <p>2500</p></article>
+    <article><p>tv</p>
+        <p>good lokking great performance</p>
+        <p>75000</p></article>
+    <article><p>books</p>
+        <p>good novel</p>
+        <p>250</p></article>
+    <article><p>us polo</p>
+        <p>good lokking great stictcing</p>
+        <p>3500</p></article>
+    <article><p>snitch</p>
+        <p>good lokking</p>
+        <p>1800</p></article>
+    <article><p>pepe jeans</p>
+        <p>good lokking</p>
+        <p>2500</p></article>
+    <article><p>wrogn</p>
+        <p>good lokking</p>
+        <p>2500</p></article>
+    </article>
+</section>
+<section class="footer3">
+    <a href="www.myntra.com">company website</a>
+    <a href="#">contact</a>
+    <a href="#">© copyrights reserved</a>
+    <a href="#">instagram</a>
+    <a href="#">facebook</a>
+</section>
+</section>
+</body>
+</html>

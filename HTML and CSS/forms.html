@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>APPLICATION FORM</h1>
+    
+    <form action="#" method="get">
+        <label for="name">firstname:</label>
+        <input type="text" name="firstname"  >
+        <label for="name">lastname:</label>
+        <input type="text" name="lastname"><br><br>
+        <label for="name">Date of birth:</label>
+        <input type="date" name="DOB" id="">
+        <label for="age">age</label>
+        <input type="number" name="age" id="age" min="1" max="100" ><br><br>
+        <label for="gender">gender:</label>
+        <select name=" gender" id="gender" >
+            <option value="male">male</option>
+            <option value="female">female</option>
+
+        </select>
+        <label for="email">Email address:</label>
+        <input type="email" name="email" id="email" placeholder="Enter Email Address"><br><br>
+        <label for="positions">Positions Available:</label>
+        <input type="radio" name="positions" id="positions" >
+        <label for="front">juniorlevel developer</label>
+        <input type="radio" name="positions" id="positions" >
+        <label for="front">midlevel developer</label>
+        <input type="radio" name="positions" id="positions" >
+        <label for="front">senior developer</label><br><br>
+        <label for="pl">Programming Languages:</label>
+
+        <input type="checkbox" name="programminglanguages" id="java" >
+        <label for="java">java</label>
+        <input type="checkbox" name="programminglanguages" id="javascript">
+        <label for="javascript">java sript</label>
+        <input type="checkbox" name="programminglangugaes" id="python">
+        <label for="python">python</label><br><br>
+        <label for="password">password:</label>
+        <input type="text" id="password" >
+        <label for="confirm password">confirm password:</label>
+        <input type="text " id="confirm password"><br><br>
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+    </form>
+    
+    <h1>Login Form using HTML and CSS</h1>
+    <h2>sign in</h2>
+    <p>sign in with username and password</p>
+    <form action="">
+        <label for="Yourusername">username</label>
+        <input type="text" id="username" placeholder="Enter username"><br><br>
+        <label for="Yourpassword">password</label>
+        <input type="text" id="password" placeholder="Enter password "><br><br>
+        <button>login</button><br><br>
+        <label for="not a member">not a memeber?</label>
+        <a href="register">registerhere</a>
+    </form>
+    <h1></h1>
+    <form action="">
+        <div style="width: 500px ;height: 500px;border: 2px solid black;">
+            <h3 style="text-align: center;">application form</h3>
+            <label for="firstname">firstname:</label>
+            <input type="text" id="firstname" placeholder="Enter firstname"><br><br>
+            <label for="lastname">lastname:</label>
+            <input type="text" id="lastname" placeholder="Enter lastname" ><br><br>
+            <label for="email">email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter email"><br><br>
+            <label for="passwword">password:</label>
+            <input type="text" id="password"><br><br>
+            <label for="gender">gender:</label>
+            <input type="radio" name="male" id="male" >
+            <label for="male">male:</label>
+            <input type="radio" name="female" id="female">
+            <label for="female">female</label>
+            <input type="radio" name="others" id="others">
+            <label for="others">others</label><br><br>
+            <label for="age">age</label>
+            <input type="number" name="age" id="age" min="1" max="100"><br><br>
+            <label for="prefernces">prefernces:</label>
+            
+            <label for="acrylic painting">acrylic painting</label>
+            <input type="checkbox" name="acrylic painting" id="acrylic painting">
+
+            <label for="oil painting">oil painting</label>
+            <input type="checkbox" name="oil painting" id="oil painting">
+
+            <label for="water colour painting">water colour painting</label>
+            <input type="checkbox" name="water colour painting" id="water colour painting"><br><br>
+            <label for="occupation">occupation:</label>
+            <select name="occupation" id="occupation">
+                <option value="occupation">student</option>
+                <option value="occupation">employee</option>
+            </select><br><br>
+            <label for="bio">bio:</label>
+            <textarea name="bio" id="bio">enter few lines about you....</textarea><br><br>
+            <button type="submit" >submit</button>
+            <button type="reset">reset</button>
+        </div>
+    </form>
+    
+    <form action=" ">
+        <h2>All Form Types Demo</h2>
+        <label for="text">Text:</label>
+        <input type="text" placeholder="your name"><br><br>
+        <label for="password">password:</label>
+        <input type="text" placeholder="secret"><br><br>
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email" placeholder="your@example.com"><br><br>
+        <label for="url">URL:</label>
+        <input type="url" name="URL" id="URL" placeholder="https//example.com"><br><br>
+        <label for="telephone">telephone:</label>
+        <input type="tel" name="telephone" id="telephone" placeholder="+91 xxxxxxxxxx" pattern="[0,9]"><br><br>
+        <label for="search">search:</label>
+        <input type="search" name="search" id="search" placeholder="search form"><br><br>
+        <label for="number">Number:</label>
+        <input type="number" name="number" id="number" ><br><br>
+        <label for="range">range:</label>
+        <input type="range" name="range" id="range" min="0" max=" 100" step="3"><br><br>
+        <label for="date">date:</label>
+        <input type="date" name="date" id="date">
+        <label for="time">Time:</label>
+        <input type="time" name="time" id="time">
+        <label for="week">week:</label>
+        <input type="week" name="week" id="week">
+        <label for="month">month:</label>
+        <input type="month" name="month" id="month"><br><br>
+        <label for="file">File:</label>
+        <input type="file" name="file" id="file"><br><br>
+        <label for="colur">colur</label>
+        <input type="color" name="colur" id="colur"><br><br>
+        <input type="checkbox" name="agree" id="I agree to the forms">
+        <label for="I agree to the forms">I agree to the forms</label><br><br>
+        <input type="checkbox" name="newsletter" id="subscribe the newsletter" checked>
+        <label for="subscribe the newsletter">subscribe the newsletter</label><br><br>
+        <label for="gender">Gender:</label><br>
+        <input type="radio" name="male" id="male">
+        <label for="male">male</label><br>
+        <input type="radio" name="female" id="female">
+        <label for="femlae">female</label><br>
+        <input type="radio" name="other" id="other" checked>
+        <label for="other">other</label><br><br>
+        <label for="country">country(single select)</label>
+        <select name="country" id="country">
+            <option value="choose">..choose..</option>
+            <option value="india">India</option>
+        </select><br><br>
+        <label for="message">Message:</label>
+        <textarea name="message" id="message">write something.....</textarea><br><br>
+        <button type="submit">submit form</button>
+        <button type="reset">reset form</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 3px solid black;
+            display: flex;
+            flex-direction: row;
+            flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse;
+        }
+        .navi{
+            display: flex;
+            justify-content: center;
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: space-between;
+        }
+        .cards{
+            height: 400px;
+            display: flex;
+            align-items: flex-end;
+            align-items: flex-start;
+            align-items: center;
+        }
+        .card{
+            align-self:flex-end ;
+        }
+        .productcards{
+            display: flex;
+            width: 50px;
+            flex-wrap: wrap;
+        }
+        .panels{
+            display: flex;
+            width: 500px;
+        }
+        .panel{
+            flex: 1 1 200px;
+        }
+        .login {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+        }
+        .container1{
+            display: flex;
+            justify-content: space-between;
+            background-color: blue;
+            color: white;
+            gap: 20px;
+            
+        }
+        .container1 nav{
+            display: flex;
+            gap: 20px;
+        }
+        .container1 a{
+            color: whitesmoke;
+        }
+        @media(max-width:600px){
+            .container1{
+                flex-wrap: wrap;
+            }
+            .container1 nav{
+                flex-wrap: wrap;
+            }
+            .container1 button{
+                flex-wrap: wrap;
+            }
+        }
+        .container1 button{
+            background-color: blue;
+            color: white;
+
+        }
+        .pricing{
+            display: flex;
+            flex-direction: row;
+            height: 400px;
+            gap: 30px;
+            padding: 20px;
+
+        }
+        .price{
+            border: 1px solid black;
+        }
+        .price1:hover{
+            /* transition:height 2s 3s ; */
+            background-color:gold;
+            transform: scale(1.1);
+
+        }
+        .price1{
+            border: 1px solid black;}
+        .pricing button{
+            display: flex;
+            margin-top: auto;
+        }
+        @media(max-width:500px){
+            .pricing{
+                /* flex-wrap: wrap; */
+                flex-direction: column;
+            }
+        }
+        .dashboard{
+            display: flex;
+            align-items: center;
+            background-color: bisque;
+            gap: 20px;
+        }
+        .user{
+            display: flex;
+            flex-shrink: 0;
+        }
+        .search {
+            display: flex;
+            flex: 1;
+        }
+        .search input{
+            width: 100%;
+        }
+        .notifications{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .notifications .success,
+        .notifications .warning,
+        .notifications .error,
+        .notifications .info{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border: 2px dotted black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+    <nav class="navi">
+        <a href="#">home</a>
+        <a href="#">coursews</a>
+        <a href="#">internships</a>
+        <a href="#">conatct</a>
+        <a href="#">webpage</a>
+    </nav>
+    <div class="cards">
+        <div>card1</div>
+        <div>card2</div>
+        <div class="card">card3</div>
+        <div>card4</div>
+        <div>card5</div>
+    </div>
+    <div class="productcards">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <div class="panels">
+        <div class="panel">panel 1</div>
+        <div class="panel">panel 2</div>
+        <div class="panel">panel 3</div>
+    </div>
+    <div class="login">
+        <h1>Login to your account</h1>
+        <input type="text" placeholder="username">
+        <input type="text" placeholder="password">
+        <button type="submit">Login</button>
+        <a href="#">forget password?</a>
+    </div>
+    <div class="container1">
+            <div>logo</div>
+        <nav>
+            <a href="#">home</a><a href="#">skills</a><a href="#">people</a><a href="#">contact</a>    
+            <button>getstarted</button>
+        </nav>
+    </div>
+    <div class="pricing">
+        <div class="price">
+            <h2>Basic</h2>
+            <h3>features:</h3>
+            <p>basic plan</p>
+            <p>only mobile</p>
+            <p>only 1 device</p>
+            <p>RS.299</p>
+            <button>Buy now</button>
+        </div>
+        <div class="price1">
+            <h2>Standard</h2>
+            <h3>features:</h3>
+            <p>Standard plan</p>
+            <p>mobile+laptop</p>
+            <p>2 devices</p>
+            <p>with no ads</p>
+            <p>RS.499</p>
+            <button>Buy now</button>
+        </div>
+        <div class="price">
+            <h2>Premium</h2>
+            <h3>features:</h3>
+            <p>Premium</p>
+            <p>mobile+laptop+TV</p>
+            <p>with no ads</p>
+            <p>5 devices</p>
+            <p>1080p quality</p>
+            <p>RS.999</p>
+            <button>Buy now</button>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="title">
+            <p>Title</p>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="-------search------">
+        </div>
+        <div class="user">
+            user
+        </div>
+    </div>
+    <section class="notifications">
+        <article class="success">
+        <span> ✓</span>
+        <p>your notification is succes</p>
+        <button>X</button>
+        </article>
+        <article class="warning">
+            <span>⚠</span>
+            <p>warning your message is suspicious</p>
+            <button>X</button>
+        </article>
+        <article class="error">
+            <span>X</span>
+            <p>your message is error please correct it</p>
+            <button>X</button>
+        </article>
+        <article class="info">
+            <span>ⓘ</span>
+            <p>get info here</p>
+            <button>X</button>
+        </article>
+    </section>
+</body>
+</html>
