@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sale {
+            width: 400px;margin: 100px auto;
+            text-align: center;
+            padding: 20px;
+            background-color: antiquewhite;
+            color: red;
+            border-radius: 40px;
+        }
+        .sale h1{
+            color: red;
+        }
+        .sale h2{
+            color: red;
+        }
+        #countdown{
+            font-size: larger;
+            color: aqua;
+        }
+        .game{
+            text-align: center;
+            width: 100%;
+            background-color: bisque;
+            color: black;
+        }
+        .game p{
+            font-size: larger;
+        }
+        .game button{
+            cursor: pointer;
+            background-color: black;
+            border-radius: 30px;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- <h2 id="largest"></h2>
+    <div id="stars"></div>
+    <div id="numbers"></div>
+    <div id="numbers1"></div>
+    <div id="reversenumbers"></div>
+    <div id="clock"></div>
+    <div id="age"></div>
+    <div id="delivery"></div> -->
+<!-- <div class="sale">
+    <h1>end of season sale</h1>
+    <h2>sale ending soon........</h2>
+
+
+    <div id="countdown">
+
+    </div>
+</div> -->
+<div class="game">
+<h1>MIND GAME TEST</h1>
+<h2 id="number"></h2>
+<input type="number" id="num" placeholder="enter  a number.."><br><br>
+
+<button onclick="checkingnumber()">submit</button>
+<button onclick="guessnumber()">start</button>
+
+<p id="score">score:0</p>
+<p id="else"></p>
+</div>
+
+    <script src="functions.js"></script>
+</body>
+</html>

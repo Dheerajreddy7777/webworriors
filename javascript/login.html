@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: beige;
+        }
+        #login{
+            width:600px ;
+            height: 200px;
+            background-color: antiquewhite;
+            text-align: center;
+            margin: 100px auto;
+            position: relative;
+        }
+        .loginbtn {
+            width: 150px;
+            border: none;
+            border-radius: 20px;
+            background-color: aliceblue;
+            cursor: pointer;
+        }
+        #dark {
+            position: absolute;
+            border: none;
+            right: 70px;
+            top: 10px;
+            cursor: pointer;
+        }
+        #white{
+            position: absolute;
+            border: none;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="login">
+        <h1>Login form</h1>
+
+        <input id="username" type="text" placeholder="username@gmail.com"><br><br>
+        <input id="password" type="password" placeholder="password"><br><br>
+        <button onclick="login()" class="loginbtn" type="submit">Login</button>
+        <button onclick="darkmode()" id="dark">DARK</button>
+        <button onclick="lightmode()" id="white">LIGHT</button><br><br>
+
+
+    </div>
+
+<script src="login.js"></script>
+</body>
+</html>

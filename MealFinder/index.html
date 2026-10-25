@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEAL FINDER</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+</head>
+<body>
+    <section class="nav">
+        <div class="nav1">
+            <a href="index.html" >
+            <i class="fa-regular fa-house"></i>
+            </a>
+            <h1>MEAL FINDER</h1>
+        </div>
+        <button class="menu-btn" id="menuBtn"
+                aria-label="Open categories" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </section>
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="sidebar" id="sidebar" aria-label="Meal categories">
+
+        <button class="close-btn" id="closeBtn"
+                aria-label="Close categories">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+
+        <ul id="categoryList">
+            <li><a href="#" data-category="Beef">Beef</a></li>
+            <li><a href="#" data-category="Chicken">Chicken</a></li>
+            <li><a href="#" data-category="Dessert">Dessert</a></li>
+            <li><a href="#" data-category="Lamb">Lamb</a></li>
+            <li><a href="#" data-category="Miscellaneous">Miscellaneous</a></li>
+            <li><a href="#" data-category="Pasta">Pasta</a></li>
+            <li><a href="#" data-category="Pork">Pork</a></li>
+            <li><a href="#" data-category="Seafood">Seafood</a></li>
+            <li><a href="#" data-category="Side">Side</a></li>
+            <li><a href="#" data-category="Starter">Starter</a></li>
+            <li><a href="#" data-category="Vegan">Vegan</a></li>
+            <li><a href="#" data-category="Vegetarian">Vegetarian</a></li>
+            <li><a href="#" data-category="Breakfast">Breakfast</a></li>
+            <li><a href="#" data-category="Goat">Goat</a></li>
+        </ul>
+    </aside>
+<section class="hero">
+
+        <img class="hero-image" src="meal finder.jpg" alt="Meal Finder">
+        <div class="hero-content">
+            <form class="search" id="search">
+                <input type="text"  id="foodname" placeholder="search your meal....." required>
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <h2>What are your favorite cuisines?</h2>
+            <p>personalize your experiences</p>
+        </div>
+
+</section>
+
+<section class="meals-section" id="mealsSection">
+    <h2 id="resultsTitle">SEARCH RESULTS</h2>
+
+    <div class="meal-grid" id="mealResults"></div>
+
+    <p id="message"></p>
+</section>
+<section class="categories-section">
+    <h2 class="categories-title">CATEGORIES</h2>
+
+    <div class="categories-grid" id="categoriesGrid">
+    </div>
+
+    <p id="categoryMessage"></p>
+</section>
+
+<section class="meal-details" id="mealDetails">
+    <button id="backBtn" type="button">← Back to meals</button>
+
+    <div id="mealDetailsContent"></div>
+</section>
+    <script src="app.js"></script>
+</body>
+</html>
